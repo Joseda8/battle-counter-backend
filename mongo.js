@@ -58,33 +58,6 @@ function do_query(query, info, dataCallback){
           }
 
       });
-      
-    // MongoClient.connect(db_mongo, function lambda(err, dbInstance) {
-
-    //     if (err) {
-    //         console.log(`[MongoDB connection] ERROR: ${err}`);
-    //         dataCallback(err);
-
-    //     } else {
-    //         const dbObject = dbInstance.db(dbName);
-
-    //         switch(query) {
-
-    //             case "PLUS_JOSE":                    
-    //                 dbCollection = dbObject.collection(dbCollectionName); 
-    //                 dbCollection.find({}, { projection: {_id:0}} ).toArray(function(error, result) {
-    //                     if(error){console.log(error);}
-    //                     dataCallback(result);
-    //                 });
-    //                 break;
-
-    //             default:
-    //                 dataCallback("Consulta no encontrada");
-    //           }
-        
-    //         dbInstance.close();
-    //     }
-    // });
 }
 
 

@@ -5,8 +5,6 @@ app.use(cors());
 
 const db_mongo = require("./mongo");
 
-const pokemon_list = require("./pokemon_list");
-
 app.get('/', (req, res) => {
     db_mongo.do_query("FIND_ALL", null, (data) => {        
         res.send({
@@ -38,10 +36,6 @@ app.get('/less1_ana', (req, res) => {
     db_mongo.do_query("LESS_ANA", null, (data) => {
         res.sendStatus(200);
     });
-})
-
-app.get('/pokemon', (req, res) => {
-    res.send(pokemon_list);
 })
 
 const port = process.env.PORT || '5000';
